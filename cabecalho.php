@@ -9,7 +9,7 @@
     <link href="assets/css/app.css" rel="stylesheet">
 </head>
 
-<body>
+<body style="margin-top: -2px">
     <nav class="navbar navbar-inverse" >
         <div class="container"  >
         <div class="navbar-header" style="">

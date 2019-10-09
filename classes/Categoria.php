@@ -11,8 +11,8 @@
                 $this->carregar();
             }
         }
-        public function listar() {
-            $query = "SELECT id, nome FROM categorias";
+        public static function listar() {
+            $query = "SELECT id, nome FROM categorias ORDER BY nome";
             $con = Conexao::getConexao();
             $resultado = $con->query($query);
             $lista = $resultado->fetchAll();

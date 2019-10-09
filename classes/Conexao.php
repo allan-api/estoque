@@ -1,4 +1,4 @@
-vbh<?php
+<?php
 
 
 class Conexao {
