@@ -44,12 +44,12 @@
                 <?php foreach ($lista as $item) { ?>
                     <tr>
                         <td><?php echo $item['id']?></td>
-                        <td><?php echo $item['nome']?></td>
+                        <td><?php echo utf8_decode($item['nome'])?></td>
                         <td>R$ <?php echo $item['preco']?></td>
                         <td><?php echo $item['quantidade']?></td>
                         <td><?php echo $item['categoria_nome']?></td>
-                        <td><a href="./produtos-editar.php?id=<?php echo $item['id']?>" class="btn btn-info">Editar</a></td>
-                        <td><a href="./produtos-excluir.php?id=<?php echo $item['id']?>" class="btn btn-danger">Excluir</a></td>
+                        <td><a href="/produtos-editar.php" class="btn btn-info">Editar</a></td>
+                        <td><a href="#" class="btn btn-danger">Excluir</a></td>
                     </tr>
                 <?php } ?>
             </tbody>

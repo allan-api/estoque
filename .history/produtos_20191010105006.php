@@ -48,8 +48,8 @@
                         <td>R$ <?php echo $item['preco']?></td>
                         <td><?php echo $item['quantidade']?></td>
                         <td><?php echo $item['categoria_nome']?></td>
-                        <td><a href="./produtos-editar.php?id=<?php echo $item['id']?>" class="btn btn-info">Editar</a></td>
-                        <td><a href="./produtos-excluir.php?id=<?php echo $item['id']?>" class="btn btn-danger">Excluir</a></td>
+                        <td><a href="/produtos-editar.php" class="btn btn-info">Editar</a></td>
+                        <td><a href="/produtos-excluir.php" class="btn btn-danger">Excluir</a></td>
                     </tr>
                 <?php } ?>
             </tbody>

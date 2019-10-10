@@ -35,7 +35,7 @@
         }
         
         public function inserir() {
-            $query = "INSERT INTO categorias (nome) VALUES ( :nome )";  
+            $query = "INSERT INTO categorias (nome) VALUES (' :nome ')";  
             $con = Conexao::getConexao();
             $stmt = $con->prepare($query);
             $stmt->bindValue(':nome', $this->nome);
@@ -43,19 +43,15 @@
         }
         
         public function atualizar() {
-            $query = "UPDATE categorias set nome = :nome WHERE id = :id";
+            $query = "UPDATE categorias set nome = '" . $this->nome . "' WHERE id = '" . $this->id . "'";
             $con = Conexao::getConexao();
-            $stmt = $con->prepare($query);
-            $stmt->bindValue(':nome', $this->nome);
-            $stmt->bindValue(':id', $this->id);
-            $stmt->execute();            
+            $resultado = $con->exec($query);
+            
         }
         
         public function Excluir() {
-            $query = "DELETE FROM categorias WHERE id = :id"; 
+            $query = "DELETE FROM categorias WHERE id = " . $this->id; 
             $conexao = Conexao::getConexao();
-            $stmt = $conexao->prepare($query);
-            $stmt->bindValue(':id', $this);
-            $stmt->execute();
+            $conexao->exec($query);
         }
     }

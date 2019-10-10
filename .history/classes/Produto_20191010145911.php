@@ -17,17 +17,17 @@ class Produto {
     }
 
     public function carregar() {
-        $query = "SELECT nome, preco, quantidade, categoria_id FROM produtos WHERE id = :id ";
+        $query = "SELECT (nome, preco, quantidade, categoria) FROM produtos WHERE id = :id ";
         $conexao = Conexao::getConexao();
         $stmt = $conexao->prepare($query);
         $stmt->bindValue(':id', $this->id);
         $stmt->execute();
         $linha = $stmt->fetch();
-        $this->nome = $linha['nome'];
-        $this->preco = $linha['preco'];
-        $this->quantidade = $linha['quantidade'];
-        $this->categoria_id = $linha['categoria_id'];
-        }
+        $this->nome = $linha[nome];
+        $this->preco = $linha[preco];
+        $this->quantidade = $linha[quantidade];
+        $this->categoria = $linha[categoria];
+    }
 
     public function listar() {
         $query = "SELECT p.id, p.nome, preco, quantidade, categoria_id, c.nome as categoria_nome

@@ -52,10 +52,8 @@
         }
         
         public function Excluir() {
-            $query = "DELETE FROM categorias WHERE id = :id"; 
+            $query = "DELETE FROM categorias WHERE id = " . $this->id; 
             $conexao = Conexao::getConexao();
-            $stmt = $conexao->prepare($query);
-            $stmt->bindValue(':id', $this);
-            $stmt->execute();
+            $conexao->exec($query);
         }
     }
