@@ -23,21 +23,14 @@
 <dl>
     <dt>ID</dt>
     <dd><?php echo $categoria->id?></dd>
-    <br>
     <dt>Nome</dt>
     <dd><?php echo $categoria->nome?></dd>
-    <br>
     <dt>Produtos</dt>
-    <?php if(count($listaProdutos) > 0): ?>
     <dd>
         <ul>
-            <?php foreach($listaProdutos as $linha):?>
-            <li><a href="./produtos-editar.php?id=<?php echo $linha['id']?>"><?php echo $linha['nome']?></a></li>
-            <?php endforeach?>
+            <li><a href="/produtos-editar.php">Senhor dos Aneis</a></li>
+            <li><a href="/produtos-editar.php">O Guia do Mochileiro das Galáxias</a></li>
         </ul>
     </dd>
-    <?php else:?>
-        <dd>Não existem cadastrados para essa categoria</dd>
-    <?php endif?>
 </dl>
 <?php require_once 'rodape.php' ?>

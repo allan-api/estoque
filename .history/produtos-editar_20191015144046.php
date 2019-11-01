@@ -42,7 +42,7 @@
                                 $selected = 'selected';
                             }    
                         ?>
-                        <option <?php echo $selected ?> value="<?php echo $linha['id'] ?>"><?php echo $linha['nome']?></option>
+                        <option <?php echo $selected ?> value="1"><?php echo $linha['nome']?></option>
                         <?php $selected = ''?>    
                     <?php }?>
                 </select>

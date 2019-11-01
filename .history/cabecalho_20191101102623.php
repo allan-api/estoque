@@ -23,9 +23,9 @@
                 <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="./index.php" style="padding: 10px; margin-left: 80px;margin-top: 20px; mar">Controle de Estoque</a>
+            <!--<a class="navbar-brand" href="./index.php" style="padding: 10px; margin-left: 80px;margin-top: 20px; mar">Controle de Estoque</a>-->
             </div>
-            <div id="navbar" class="navbar-collapse collapse" style="margin-left:40%; margin-top: -30%">
+            <div id="navbar" class="navbar-collapse collapse" style="margin-left:30%; margin-top: -30%">
                 <ul class="nav navbar-nav" style="margin-top: 20px" >
                     <li><a href="./categorias.php">Categorias</a></li>
                     <li><a href="./produtos.php">Produtos</a></li>

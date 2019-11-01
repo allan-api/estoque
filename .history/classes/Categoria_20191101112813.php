@@ -4,7 +4,6 @@
     {
         public $id;
         public $nome;
-        public $produtos;
 
         public function __construct($id = false) {
             if($id) {
@@ -54,15 +53,11 @@
             $stmt->execute();            
         }
         
-        public function excluir() {
+        public function Excluir() {
             $query = "DELETE FROM categorias WHERE id = :id"; 
             $conexao = Conexao::getConexao();
             $stmt = $conexao->prepare($query);
             $stmt->bindValue(':id', $this->id);
             $stmt->execute();
-        }
-
-        public function carregarProdutos() {
-            $this->produtos = Produto::listarPorCategoria($this-> id);
         }
     }

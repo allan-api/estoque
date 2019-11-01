@@ -17,7 +17,6 @@
 </div>
 
 <form action="produtos-editar-post.php" method="post">
-    <input type="hidden" name="id" value="<?php echo $produto->id?>">
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <div class="form-group">
@@ -42,8 +41,8 @@
                                 $selected = 'selected';
                             }    
                         ?>
-                        <option <?php echo $selected ?> value="<?php echo $linha['id'] ?>"><?php echo $linha['nome']?></option>
-                        <?php $selected = ''?>    
+                        <option <?php echo selected ?>value="1"><?php echo $linha['nome']?></option>
+                        <?php selected = ''?>    
                     <?php }?>
                 </select>
             </div>

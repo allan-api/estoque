@@ -17,7 +17,6 @@
 </div>
 
 <form action="produtos-editar-post.php" method="post">
-    <input type="hidden" name="id" value="<?php echo $produto->id?>">
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <div class="form-group">
@@ -30,7 +29,7 @@
             </div>
             <div class="form-group">
                 <label for="quantidade">Quantidade do Produto</label>
-                <input type="number" name="quantidade" value="<?php echo $produto->quantidade?>" min="0" class="form-control" placeholder="Quantidade do Produto" required>
+                <input type="number" name="quantidade" value="R$ <?php echo $produto->quantidade?>" min="0" class="form-control" placeholder="Quantidade do Produto" required>
             </div>
             <div class="form-group">
                 <label for="nome">Categoria do Produto</label>
@@ -42,7 +41,7 @@
                                 $selected = 'selected';
                             }    
                         ?>
-                        <option <?php echo $selected ?> value="<?php echo $linha['id'] ?>"><?php echo $linha['nome']?></option>
+                        <option <?php echo $selected ?> value="1"><?php echo $linha['nome']?></option>
                         <?php $selected = ''?>    
                     <?php }?>
                 </select>

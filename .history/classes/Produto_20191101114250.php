@@ -41,7 +41,7 @@ class Produto {
         return $lista;
         
     }
-    public static function listarPorCategoria($categoria_id) {
+    public function listarPorCategoria($categoria_id) {
         $query = "SELECT id, nome, preco, quantidade FROM produtos WHERE categoria_id = :categoria_id";
         $conexao = Conexao::getConexao();
         $stmt = $conexao->prepare($query);

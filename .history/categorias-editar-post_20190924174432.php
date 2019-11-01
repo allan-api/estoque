@@ -1,16 +1,14 @@
-<?php require_once 'global.php' ?>
-
 <?php
-    try {
-        $id = $_POST['id'];
-        $nome = $_POST['nome'];
 
+require_once '/global.php';
+
+try {
+    $nome = $_POST['editarNome'];
+    $id = $_POST['id'];
     $categoria = new Categoria($id);
     $categoria->nome = $nome;
     $categoria->atualizar();
-    
-    header('Location:categorias.php');
-    
+    header('Location:categorias.php' );
 } catch (Exception $e) {
     Erro::trataErro($e);
 }

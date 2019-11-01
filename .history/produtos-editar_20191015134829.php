@@ -5,7 +5,7 @@
         $produto = new Produto($id);
         $listaCategoria = Categoria::listar();
     }catch(Exception $e){
-        Erro::trataErro($e);
+        Erro::trataErro($e)
     }
 
 ?>
@@ -16,34 +16,33 @@
     </div>
 </div>
 
-<form action="produtos-editar-post.php" method="post">
-    <input type="hidden" name="id" value="<?php echo $produto->id?>">
+<form action="#" method="post">
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <div class="form-group">
                 <label for="nome">Nome do Produto</label>
-                <input type="text" name="nome" value="<?php echo $produto->nome?>" class="form-control" placeholder="Nome do Produto" required>
+                <input type="text" value="<?php echo $produto->nome?>" class="form-control" placeholder="Nome do Produto" required>
             </div>
             <div class="form-group">
                 <label for="preco">Preço da Produto</label>
-                <input type="number" name="preco" value="<?php echo $produto->preco?>" step="0.01" min="0" class="form-control" placeholder="Preço do Produto" required>
+                <input type="number" value="<?php echo $produto->preco?>" step="0.01" min="0" class="form-control" placeholder="Preço do Produto" required>
             </div>
             <div class="form-group">
                 <label for="quantidade">Quantidade do Produto</label>
-                <input type="number" name="quantidade" value="<?php echo $produto->quantidade?>" min="0" class="form-control" placeholder="Quantidade do Produto" required>
+                <input type="number" value="<?php echo $produto->quantidade?>" min="0" class="form-control" placeholder="Quantidade do Produto" required>
             </div>
             <div class="form-group">
                 <label for="nome">Categoria do Produto</label>
-                <select class="form-control" name="categoria_id">
-                    <?php $selected = '' ?>
+                <select class="form-control">
+                    <?php selected = '' ?>
                     <?php foreach($listaCategoria as $linha){?>
                         <?php
                             if($linha['id'] == $produto->categoria_id){
-                                $selected = 'selected';
+                                selected = 'selected';
                             }    
                         ?>
-                        <option <?php echo $selected ?> value="<?php echo $linha['id'] ?>"><?php echo $linha['nome']?></option>
-                        <?php $selected = ''?>    
+                        <option <?php echo selected ?>value="1"><?php echo $linha['nome']?></option>
+                        <?php selected = ''?>    
                     <?php }?>
                 </select>
             </div>

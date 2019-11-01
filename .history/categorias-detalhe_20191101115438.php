@@ -32,7 +32,7 @@
     <dd>
         <ul>
             <?php foreach($listaProdutos as $linha):?>
-            <li><a href="./produtos-editar.php?id=<?php echo $linha['id']?>"><?php echo $linha['nome']?></a></li>
+            <li><a href="/produtos-editar.php?id=<?php echo $linha['id']?>"><?php echo $linha['nome']?></a></li>
             <?php endforeach?>
         </ul>
     </dd>

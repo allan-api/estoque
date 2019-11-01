@@ -63,6 +63,6 @@
         }
 
         public function carregarProdutos() {
-            $this->produtos = Produto::listarPorCategoria($this-> id);
+            $this->produtos = Produto::listarPorCategoria($this->id);
         }
     }
